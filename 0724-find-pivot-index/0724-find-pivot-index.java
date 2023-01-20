@@ -1,21 +1,10 @@
 class Solution {
-    public boolean ispivot(int[] nums,int index,int sum){
-        int ls=0;
-        for(int i=0;i<index;i++){
-            ls+=nums[i];
-        }
-        if(ls==sum-ls-nums[index]){
-            return true;
-        }
-        return false;
-    }
     public int pivotIndex(int[] nums) {
-        int sum=0;
-        for(int i:nums) sum+=i;
-        for(int i=0;i<nums.length;i++){
-            if(ispivot(nums,i,sum)){
-                return i;
-            }
+        int sum = 0, leftsum = 0;
+        for (int x: nums) sum += x;
+        for (int i = 0; i < nums.length; ++i) {
+            if (leftsum == sum - leftsum - nums[i]) return i;
+            leftsum += nums[i];
         }
         return -1;
     }
