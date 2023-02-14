@@ -5,8 +5,7 @@ class Solution {
             if(buy>prices[i]){
                 buy=prices[i];
             }
-            else{
-                if(ans<prices[i]-buy)
+            else if(ans<prices[i]-buy){
                 ans=prices[i]-buy;
             }
         }
