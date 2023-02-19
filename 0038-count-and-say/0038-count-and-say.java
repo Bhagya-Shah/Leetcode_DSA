@@ -9,12 +9,14 @@ class Solution {
                 count++;
             }else{
                 // ans=ans+count+c;
-                ans.append(""+count+c);
+                ans.append(count);
+                ans.append(c);
                 c=s.charAt(i);
                 count=1;
             }
         }
-        ans.append(""+count+c);
+        ans.append(count);
+        ans.append(c);
         return ans.toString();
     }
     public String countAndSay(int n) {
