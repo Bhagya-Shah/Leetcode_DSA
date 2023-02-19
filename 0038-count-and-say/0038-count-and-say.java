@@ -8,7 +8,6 @@ class Solution {
             if(c==d){
                 count++;
             }else{
-                // ans=ans+count+c;
                 ans.append(count);
                 ans.append(c);
                 c=s.charAt(i);
