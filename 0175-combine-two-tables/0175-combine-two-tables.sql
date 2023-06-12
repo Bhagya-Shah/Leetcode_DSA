@@ -1,2 +1,3 @@
-# Write your MySQL query statement below
-SELECT Person.firstName,Person.lastName,Address.city,Address.state from Person NATURAL LEFT JOIN Address
+SELECT P.firstName, P.lastName, A.city, A.state
+FROM Person P
+LEFT JOIN Address A USING (personId)
